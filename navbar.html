@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Navbar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #000;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+        .navbar-toggler-icon {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: relative;
+        }
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon div {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s;
+        }
+        .navbar-toggler-icon::before {
+            top: 0;
+        }
+        .navbar-toggler-icon::after {
+            bottom: 0;
+        }
+        .navbar-toggler-icon div {
+            top: 50%;
+            left: 50%;
+
+            transform: translateY(-50%);
+        }
+        .navbar-toggler.open .navbar-toggler-icon::before {
+            transform: rotate(45deg);
+            top: 50%;
+        }
+        .navbar-toggler.open .navbar-toggler-icon::after {
+            transform: rotate(-45deg);
+            bottom: 50%;
+        }
+        .navbar-toggler.open .navbar-toggler-icon div {
+            transform: scale(0);
+        }
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                background-color: #000;
+                transition: height 0.5s ease;
+            }
+            .navbar-collapse.collapsing {
+                height: 0 !important;
+            }
+            .navbar-collapse.show {
+                height: 92vh !important;
+            }
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                width: 100%;
+            }
+            .navbar-nav .nav-link {
+                padding: 1rem;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand text-white" href="#"><b>Creative <br>
+            Chaos</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <div></div>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="#">Services<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Career</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Clients</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler').click(function() {
+                $(this).toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html>
